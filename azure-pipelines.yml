@@ -20,7 +20,7 @@ steps:
 #- script: docker build -t $(dockerId)/$(imageName) .  # add options to this command to meet your needs
 - script: |
     docker build -t $(dockerId).azurecr.io/$(imageName) .
-    docker login -u $(dockerId) -p $(pswd) $(dockerId).azurecr.io
+    docker login -u $(dockerId) -p '2L9RGFZxcKbUt2eRkIkb80=1YKsERuRe' $(dockerId).azurecr.io
     docker push $(dockerId).azurecr.io/$(imageName)
     
 - script: |
