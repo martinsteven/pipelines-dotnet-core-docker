@@ -16,17 +16,17 @@ variables:
 
 steps:
 - script: docker build -f Dockerfile -t $(imageName) .
-#  displayName: 'docker build'
-#- script: docker build -t $(dockerId)/$(imageName) .  # add options to this command to meet your needs
-#- script: |
- #   docker build -t $(dockerId).azurecr.io/$(imageName) .
-  #  docker login -u $(dockerId) -p $(pswd) $(dockerId).azurecr.io
-   # docker push $(dockerId).azurecr.io/$(imageName)
+displayName: 'docker build'
+- script: docker build -t $(dockerId)/$(imageName) .  # add options to this command to meet your needs
+- script: |
+  docker build -t $(dockerId).azurecr.io/$(imageName) .
+  docker login -u $(dockerId) -p $(pswd) $(dockerId).azurecr.io
+  docker push $(dockerId).azurecr.io/$(imageName)
    
-   #- script: |
-    #docker-compose -f docs/docker-compose.yml --project-directory . -p docs up -d
-    #docker wait docs_sut_1
-    #docker-compose -f docs/docker-compose.yml --project-directory . down
+   - script: |
+    docker-compose -f docs/docker-compose.yml --project-directory . -p docs up -d
+    docker wait docs_sut_1
+    docker-compose -f docs/docker-compose.yml --project-directory . down
     
- #env:
-  #  pswd: $(dockerPassword) 
+ env:
+    pswd: $(dockerPassword) 
