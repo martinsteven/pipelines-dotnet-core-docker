@@ -29,4 +29,4 @@ steps:
   #  docker-compose -f docs/docker-compose.yml --project-directory . down
     
  env:
-    pswd: $(dockerPassword) 
+     pswd: $(dockerPassword) 
