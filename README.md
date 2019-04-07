@@ -1,3 +1,4 @@
+[![Build Status](https://dev.azure.com/martinsteven/DOT CORE/_apis/build/status/martinsteven.pipelines-dotnet-core-docker?branchName=master)](https://dev.azure.com/martinsteven/DOT CORE/_build/latest?definitionId=1&branchName=master)
 
 # Contributing
 
